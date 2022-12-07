@@ -1,0 +1,20 @@
+### project
+
+### python
+
+# poetry
+dist/
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+
+### ide
+
+# jetbrains
+.idea/
+
+# vscode
+.vscode/
