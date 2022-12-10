@@ -53,9 +53,7 @@ strict = true
 
 [tool.pytest.ini_options]
 addopts = "-n auto"
-testpaths = [
-  "tests",
-]
+testpaths = ["tests"]
 
 [tool.coverage.report]
 exclude_lines = [
