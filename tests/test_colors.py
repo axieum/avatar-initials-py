@@ -1,6 +1,7 @@
 import pytest
+from PIL import ImageColor
 
-from avatar_initials_py.colors import lightness
+from avatar_initials_py.colors import lightness, random_hex_color
 
 
 @pytest.mark.parametrize(
@@ -23,3 +24,10 @@ def test_lightness(color: str, expected: float) -> None:
     """
 
     assert round(lightness(color), 2) == expected
+
+
+def test_random_color() -> None:
+    """Tests the validity of randomly generated hex colour codes"""
+
+    for _ in range(200):
+        ImageColor.getrgb(random_hex_color())

@@ -1,3 +1,5 @@
+import random
+
 from PIL import ImageColor
 
 
@@ -12,3 +14,13 @@ def lightness(color: str) -> float:
 
     rgb: tuple[int, ...] = ImageColor.getrgb(color)
     return rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722
+
+
+def random_hex_color() -> str:
+    """
+    Returns a random 6-character hex colour code.
+
+    :return: hex colour in format '#139adf'
+    """
+
+    return f"#{random.randint(0x000000, 0xFFFFFF):06x}"
