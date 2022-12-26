@@ -1,7 +1,7 @@
 import pytest
 from PIL import ImageColor
 
-from avatar_initials_py.colors import lightness, random_hex_color
+from avatar_initials_py.colors import lightness, random_hex_color, lighten
 
 
 @pytest.mark.parametrize(
@@ -24,6 +24,29 @@ def test_lightness(color: str, expected: float) -> None:
     """
 
     assert round(lightness(color), 2) == expected
+
+
+@pytest.mark.parametrize(
+    "color, amount, expected",
+    [
+        ("#0af182", 80, "#5affd2"),
+        ("#8dc6c2", 120, "#ffffff"),
+        ("#0388e6", -80, "#003896"),
+        ("#ffffff", 42, "#ffffff"),
+        ("#3a3a3a", 20, "#4e4e4e"),
+        ("#000000", -80, "#000000"),
+    ]
+)
+def test_lighten(color: str, amount: int, expected: str) -> None:
+    """
+    Tests that colours are correctly lightened or darkened.
+
+    :param color: hex colour
+    :param amount: lighten amount
+    :param expected: expected lightened colour
+    """
+
+    assert lighten(color, amount) == expected
 
 
 def test_random_color() -> None:
