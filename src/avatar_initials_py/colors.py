@@ -1,4 +1,5 @@
 import random
+from typing import Optional
 
 from PIL import ImageColor
 
@@ -34,11 +35,12 @@ def lighten(color: str, amount: int) -> str:
     return f"#{r:02x}{g:02x}{b:02x}"
 
 
-def random_hex_color() -> str:
+def random_hex_color(rand: Optional[random.Random] = None) -> str:
     """
     Returns a random 6-character hex colour code.
 
+    :param rand: optional random override
     :return: hex colour in format '#139adf'
     """
 
-    return f"#{random.randint(0x000000, 0xFFFFFF):06x}"
+    return f"#{(rand or random).randint(0x000000, 0xFFFFFF):06x}"

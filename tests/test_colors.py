@@ -1,3 +1,5 @@
+import random
+
 import pytest
 from PIL import ImageColor
 
@@ -54,3 +56,11 @@ def test_random_color() -> None:
 
     for _ in range(200):
         ImageColor.getrgb(random_hex_color())
+
+
+def test_random_color_with_custom_random() -> None:
+    """Tests randomly generating hex colour codes with a custom random instance"""
+
+    rand: random.Random = random.Random(99)
+    assert random_hex_color(rand) == "#ced636"
+    assert random_hex_color(rand) == "#c2f202"
