@@ -1,11 +1,13 @@
 import random
-from typing import Optional, Any
+from typing import TYPE_CHECKING, Any, Optional
 
 from PIL import Image, ImageDraw, ImageFont
-from PIL.ImageFont import FreeTypeFont
 
+from avatar_initials_py.colors import lighten, lightness, random_hex_color
 from avatar_initials_py.text import initials as get_initials
-from avatar_initials_py.colors import lightness, random_hex_color, lighten
+
+if TYPE_CHECKING:
+    from PIL.ImageFont import FreeTypeFont
 
 
 def create_avatar(

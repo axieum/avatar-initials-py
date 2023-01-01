@@ -20,4 +20,4 @@ def initials(name: str, count: int = 2) -> str:
     letters: str = "".join(word[0] for word in re.split(r"\s+", name) if word).upper()
 
     # Truncate the initials to the desired length, removing letters from the middle
-    return letters[:min(count, len(letters)) - 1] + letters[-1] if count != 1 else letters[0]
+    return letters[: min(count, len(letters)) - 1] + letters[-1] if count != 1 else letters[0]

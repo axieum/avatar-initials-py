@@ -33,22 +33,20 @@ syrupy = "^3.0.5"
 
 [tool.poetry.group.typing.dependencies]
 mypy = ">=0.990"
+types-pillow = "^9.3.0.4"
 
 [tool.black]
 target-version = ["py37"]
+line_length = 120
 
 [tool.isort]
 py_version = 37
 profile = "black"
-combine_as_imports = true
-force_single_line = true
-lines_between_types = 1
 src_paths = ["src", "tests"]
+combine_as_imports = true
 
 [tool.mypy]
-files = "src"
-mypy_path = "src"
-explicit_package_bases = true
+files = ["src", "tests"]
 strict = true
 
 [tool.pytest.ini_options]

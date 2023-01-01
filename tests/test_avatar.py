@@ -1,13 +1,15 @@
 from io import BytesIO
-from typing import Optional, Any
+from typing import TYPE_CHECKING, Any, Optional
 
 import pytest
 from PIL import ImageFont
-from PIL.ImageFont import FreeTypeFont
-from syrupy import SnapshotAssertion
 from syrupy.extensions.image import PNGImageSnapshotExtension
 
 from avatar_initials_py.avatar import create_avatar
+
+if TYPE_CHECKING:
+    from PIL.ImageFont import FreeTypeFont
+    from syrupy.assertion import SnapshotAssertion
 
 
 def test_name_or_initials_is_required() -> None:

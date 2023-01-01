@@ -3,7 +3,7 @@ import random
 import pytest
 from PIL import ImageColor
 
-from avatar_initials_py.colors import lightness, random_hex_color, lighten
+from avatar_initials_py.colors import lighten, lightness, random_hex_color
 
 
 @pytest.mark.parametrize(
@@ -37,7 +37,7 @@ def test_lightness(color: str, expected: float) -> None:
         ("#ffffff", 42, "#ffffff"),
         ("#3a3a3a", 20, "#4e4e4e"),
         ("#000000", -80, "#000000"),
-    ]
+    ],
 )
 def test_lighten(color: str, amount: int, expected: str) -> None:
     """
