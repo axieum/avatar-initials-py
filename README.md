@@ -29,7 +29,7 @@ poetry add avatar-initials
 
 ## Contributing
 
-Thank you for considering contributing to Auth Me! Please see the
+Thank you for considering contributing to `avatar-initials-py`! Please see the
 [Contribution Guidelines][contributing].
 
 ## Security Vulnerabilities
@@ -42,9 +42,9 @@ vulnerabilities.
 `avatar-initials-py` is open-sourced software licenced under the
 [MIT licence][licence].
 
-[contributing]: .github/CONTRIBUTING.md
+[contributing]: CONTRIBUTING.md
 [licence]: https://opensource.org/licenses/MIT
 [poetry]: https://python-poetry.org/
 [pypi]: https://pypi.org/
 [release]: https://github.com/axieum/authme/releases/latest
-[security]: .github/SECURITY.md
+[security]: SECURITY.md
