@@ -6,8 +6,8 @@ Generate simple and unique avatars using a person's initials
 
 [![Build](https://img.shields.io/github/actions/workflow/status/axieum/avatar-initials-py/release.yml?branch=main&style=for-the-badge)][ci:release]
 [![Tests](https://img.shields.io/github/actions/workflow/status/axieum/avatar-initials-py/test.yml?branch=main&label=tests&style=for-the-badge)][ci:test]
-[![Python](https://img.shields.io/pypi/pyversions/avatar-initials-py?style=for-the-badge)][python]
-[![PyPi](https://img.shields.io/pypi/v/avatar-initials-py?style=for-the-badge&include_prereleases&sort=semver)][pypi]
+[![Python](https://img.shields.io/pypi/pyversions/avatar-initials?style=for-the-badge)][python]
+[![PyPi](https://img.shields.io/pypi/v/avatar-initials?style=for-the-badge&include_prereleases&sort=semver)][pypi]
 
 </div>
 
@@ -50,6 +50,6 @@ vulnerabilities.
 [contributing]: CONTRIBUTING.md
 [licence]: https://opensource.org/licenses/MIT
 [poetry]: https://python-poetry.org/
-[pypi]: https://pypi.org/project/avatar-initials-py
+[pypi]: https://pypi.org/project/avatar-initials
 [python]: https://python.org/
 [security]: SECURITY.md

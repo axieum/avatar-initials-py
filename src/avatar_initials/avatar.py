@@ -5,8 +5,8 @@ from typing import TYPE_CHECKING, Any, Optional
 
 from PIL import Image, ImageDraw, ImageFont
 
-from avatar_initials_py.colors import lighten, lightness, random_hex_color
-from avatar_initials_py.text import initials as get_initials
+from avatar_initials.colors import lighten, lightness, random_hex_color
+from avatar_initials.text import initials as get_initials
 
 if TYPE_CHECKING:
     from PIL.ImageFont import FreeTypeFont

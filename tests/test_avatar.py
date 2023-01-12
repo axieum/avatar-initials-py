@@ -7,7 +7,7 @@ import pytest
 from PIL import ImageFont
 from syrupy.extensions.image import PNGImageSnapshotExtension
 
-from avatar_initials_py.avatar import create_avatar
+from avatar_initials.avatar import create_avatar
 
 if TYPE_CHECKING:
     from PIL.ImageFont import FreeTypeFont

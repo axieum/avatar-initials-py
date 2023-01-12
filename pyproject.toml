@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "avatar-initials-py"
+name = "avatar-initials"
 version = "0.1.0"
 description = "Generate simple and unique avatars using a person's initials."
 license = "MIT"
@@ -15,7 +15,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Typing :: Typed",
 ]
-packages = [{ include = "avatar_initials_py", from = "src" }]
+packages = [{ include = "avatar_initials", from = "src" }]
 include = [{ path = "tests", format = "sdist" }]
 
 [tool.poetry.dependencies]

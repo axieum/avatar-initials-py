@@ -3,7 +3,7 @@ import random
 import pytest
 from PIL import ImageColor
 
-from avatar_initials_py.colors import lighten, lightness, random_hex_color
+from avatar_initials.colors import lighten, lightness, random_hex_color
 
 
 @pytest.mark.parametrize(

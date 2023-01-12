@@ -1,6 +1,6 @@
 import pytest
 
-from avatar_initials_py.text import initials
+from avatar_initials.text import initials
 
 
 @pytest.mark.parametrize(
