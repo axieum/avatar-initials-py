@@ -19,7 +19,7 @@ packages = [{ include = "avatar_initials", from = "src" }]
 include = [{ path = "tests", format = "sdist" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.7"
 pillow = "^9.4.0"
 
 [tool.poetry.group.dev.dependencies]

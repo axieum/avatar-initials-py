@@ -6,15 +6,22 @@ on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
   test:
-    name: Python ${{ matrix.python-version }} (${{ matrix.os }})
+    name: ${{ matrix.os }} Python ${{ matrix.python-version }}
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.image }}
 
     strategy:
       fail-fast: false
       matrix:
-        os: [ macos-latest, ubuntu-latest, windows-latest ]
+        os: [ Ubuntu, macOS, Windows ]
         python-version: [ 3.11, 3.10, 3.9, 3.8, 3.7 ]
+        include:
+          - os: Ubuntu
+            image: ubuntu-latest
+          - os: macOS
+            image: macos-latest
+          - os: Windows
+            image: windows-latest
 
     steps:
       - name: ✨ Checkout repository
@@ -32,8 +39,14 @@ jobs:
       - name: ⬇️ Install dependencies
         run: poetry install
 
-      - name: 🧪 Run tests
-        run: poetry run pytest
-
       - name: 🧩 Run type checks
         run: poetry run mypy
+
+      - name: 🧪 Run tests
+        run: poetry run pytest --cov --cov-report=xml
+
+      - name: 📑 Upload coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true

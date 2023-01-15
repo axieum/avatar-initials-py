@@ -13,6 +13,14 @@ dist/
 # pytest
 .pytest_cache/
 
+# coverage
+htmlcov/
+*.cover
+*.py,cover
+.coverage*
+coverage.lcov
+coverage.xml
+
 ### ide
 
 # jetbrains
